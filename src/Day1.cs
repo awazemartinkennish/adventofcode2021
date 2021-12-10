@@ -11,4 +11,15 @@ public class Day1
 
         return count;
     }
+
+    public int Part2(List<int> inputs)
+    {
+        List<int> slidingWindows = new();
+        for(int i = 2; i < inputs.Count; i++)
+        {
+            slidingWindows.Add(inputs[i-2] + inputs[i-1] + inputs[i]);
+        }
+
+        return Part1(slidingWindows);
+    }
 }

@@ -12,21 +12,7 @@ public class UnitTest1
   [Fact]
   public void Part1_example()
   {
-    List<int> inputs = new()
-    {
-      199,
-      200,
-      208,
-      210,
-      200,
-      207,
-      240,
-      269,
-      260,
-      263,
-    };
-
-    int actual = sut.Part1(inputs);
+    int actual = sut.Part1(example);
 
     actual.Should().Be(7);
   }
@@ -36,8 +22,36 @@ public class UnitTest1
   {
     int actual = sut.Part1(data);
 
-    actual.Should().Be(7);
+    actual.Should().Be(1616);
   }
+
+    [Fact]
+    public void Part2_example()
+    {
+        int actual = sut.Part2(example);
+        actual.Should().Be(5);
+    }
+
+    [Fact]
+    public void Part2_actual()
+    {
+        int actual = sut.Part2(data);
+        actual.Should().Be(1645);
+    }
+
+  private readonly List<int> example = new()
+  {
+    199,
+    200,
+    208,
+    210,
+    200,
+    207,
+    240,
+    269,
+    260,
+    263,
+  };
 
   private readonly List<int> data = new()
   {
