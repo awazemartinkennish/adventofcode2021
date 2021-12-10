@@ -6,7 +6,7 @@ using src;
 
 namespace test;
 
-public class UnitTest1
+public class Day1Tests
 {
   private readonly Day1 sut = new Day1();
   [Fact]
