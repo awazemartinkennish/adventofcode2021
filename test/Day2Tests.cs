@@ -24,6 +24,19 @@ public class Day2Tests
     actual.Should().Be(1868935);
   }
 
+  [Fact]
+  public void Part2_example()
+  {
+    int actual = sut.Part2(example);
+    actual.Should().Be(900);
+  }
+
+  [Fact]
+  public void Part2_actual()
+  {
+    int actual = sut.Part2(data);
+    actual.Should().Be(1965970888);
+  }
   private readonly List<string> example = new()
   {
     "forward 5",
